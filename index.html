@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>上海鲜余鲜国际贸易有限公司 - 斯里兰卡野生海鲜进口专家</title>
+    <meta name="description" content="上海鲜余鲜进出口贸易有限公司 - 斯里兰卡野生海鲜进口专家，主营螃蟹、龙虾等冰鲜海产品进出口贸易，直供国内批发客户。">
+    <meta property="og:title" content="上海鲜余鲜进出口贸易有限公司 - 斯里兰卡野生海鲜进口专家">
+    <meta property="og:description" content="斯里兰卡野生海鲜进口专家，主营螃蟹、龙虾等冰鲜海产品，直供国内批发。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zjreeftank-hash.github.io">
+    <meta property="og:image" content="https://zjreeftank-hash.github.io/logo.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://zjreeftank-hash.github.io">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%A6%80</text></svg>">
+    <title>上海鲜余鲜进出口贸易有限公司 - 斯里兰卡野生海鲜进口专家</title>
     <style>
         * {
             margin: 0;
@@ -166,6 +175,28 @@
 
         .nav-links a:hover::after {
             width: 100%;
+        }
+
+        /* 移动端汉堡按钮（默认隐藏，仅窄屏显示） */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 28px;
+            height: 20px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s;
         }
 
         /* 主要内容区 */
@@ -773,8 +804,35 @@
 
         /* 响应式 */
         @media (max-width: 900px) {
+            .menu-toggle {
+                display: flex;
+            }
+
             .nav-links {
                 display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background: var(--primary);
+                padding: 8px 0;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .nav-links a {
+                display: block;
+                padding: 14px;
             }
             
             .hero h1 {
@@ -826,6 +884,9 @@
             <li><a href="#culture">公司美食</a></li>
             <li><a href="#contact">联系我们</a></li>
         </ul>
+        <button class="menu-toggle" aria-label="打开菜单" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
     <!-- 首屏 -->
@@ -833,13 +894,13 @@
         <div class="hero-content">
             <div class="logo-container">
                 <div class="logo">
-                    <img src="logo.jpg" alt="鲜余鲜商标">
+                    <img loading="lazy" src="logo.jpg" alt="鲜余鲜商标">
                 </div>
                 <div class="logo">
-                    <img src="海外公司商标.png" alt="OceanGate商标">
+                    <img loading="lazy" src="海外公司商标.png" alt="OceanGate商标">
                 </div>
             </div>
-            <h1>上海鲜余鲜国际贸易有限公司</h1>
+            <h1>上海鲜余鲜进出口贸易有限公司</h1>
             <p class="subtitle">斯里兰卡野生海鲜进口专家</p>
             <p class="tagline">源自印度洋的纯净鲜美 · 野生捕捞 · 环保健康</p>
         </div>
@@ -854,7 +915,7 @@
             </div>
             <div class="about-content">
                 <div class="about-text fade-in">
-                    <p>上海鲜余鲜国际贸易有限公司是一家专业从事斯里兰卡野生海鲜进口贸易的企业。我们致力于将印度洋纯净海域的顶级海鲜送到您的餐桌。</p>
+                    <p>上海鲜余鲜进出口贸易有限公司是一家专业从事斯里兰卡野生海鲜进口贸易的企业。我们致力于将印度洋纯净海域的顶级海鲜送到您的餐桌。</p>
                     <p>公司创始人周健先生从事海鲜进出口贸易多年，凭借对品质的执着追求，与斯里兰卡当地优质供应商建立了长期稳定的合作关系。</p>
                     <p>我们坚持"野生、环保、健康"的理念，所有产品均来自斯里兰卡无污染海域，纯天然野生捕捞，保留海鲜最原始的鲜美与营养。</p>
                 </div>
@@ -894,7 +955,7 @@
             <div class="products-grid">
                 <div class="product-card fade-in">
                     <div class="product-image" style="background: linear-gradient(135deg, #1a5a4a 0%, #2d8b6f 100%);">
-                        <img src="crab.jpg" alt="斯里兰卡青蟹" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img loading="lazy" src="crab.jpg" alt="斯里兰卡青蟹" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="product-info">
                         <h3>斯里兰卡青蟹</h3>
@@ -908,7 +969,7 @@
                 </div>
                 <div class="product-card fade-in">
                     <div class="product-image" style="background: linear-gradient(135deg, #1a5a4a 0%, #2d8b6f 100%);">
-                        <img src="lobster.jpg" alt="斯里兰卡小青龙" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img loading="lazy" src="lobster.jpg" alt="斯里兰卡小青龙" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div class="product-info">
                         <h3>斯里兰卡小青龙</h3>
@@ -933,16 +994,16 @@
             </div>
             <div class="packaging-gallery fade-in">
                 <div class="packaging-item">
-                    <img src="pack1.jpg" alt="专业包装1">
+                    <img loading="lazy" src="pack1.jpg" alt="专业包装1">
                 </div>
                 <div class="packaging-item">
-                    <img src="pack2.jpg" alt="专业包装2">
+                    <img loading="lazy" src="pack2.jpg" alt="专业包装2">
                 </div>
                 <div class="packaging-item">
-                    <img src="pack3.jpg" alt="专业包装3">
+                    <img loading="lazy" src="pack3.jpg" alt="专业包装3">
                 </div>
                 <div class="packaging-item">
-                    <img src="pack4.jpg" alt="专业包装4">
+                    <img loading="lazy" src="pack4.jpg" alt="专业包装4">
                 </div>
             </div>
             <div class="notice-section fade-in">
@@ -1002,27 +1063,27 @@
             </div>
             <div class="culture-gallery fade-in">
                 <div class="culture-item">
-                    <img src="1.jpg" alt="美食文化1">
+                    <img loading="lazy" src="1.jpg" alt="美食文化1">
                     <div class="culture-caption">🤝 供应商合影</div>
                 </div>
                 <div class="culture-item">
-                    <img src="2.jpg" alt="公司文化2">
+                    <img loading="lazy" src="2.jpg" alt="公司文化2">
                     <div class="culture-caption">👥 公司团队</div>
                 </div>
                 <div class="culture-item">
-                    <img src="3.jpg" alt="公司文化3">
+                    <img loading="lazy" src="3.jpg" alt="公司文化3">
                     <div class="culture-caption">🏢 公司形象</div>
                 </div>
                 <div class="culture-item">
-                    <img src="4.jpg" alt="公司文化4">
+                    <img loading="lazy" src="4.jpg" alt="公司文化4">
                     <div class="culture-caption">🍽️ 美食分享</div>
                 </div>
                 <div class="culture-item">
-                    <img src="5.jpg" alt="公司文化5">
+                    <img loading="lazy" src="5.jpg" alt="公司文化5">
                     <div class="culture-caption">🍽️ 美食分享</div>
                 </div>
                 <div class="culture-item">
-                    <img src="6.jpg" alt="公司文化6">
+                    <img loading="lazy" src="6.jpg" alt="公司文化6">
                     <div class="culture-caption">🍽️ 美食分享</div>
                 </div>
             </div>
@@ -1127,7 +1188,7 @@
                         <div class="contact-icon">🏢</div>
                         <div class="contact-text">
                             <h4>公司名称</h4>
-                            <p>上海鲜余鲜国际贸易有限公司</p>
+                            <p>上海鲜余鲜进出口贸易有限公司</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1176,7 +1237,7 @@
 
     <!-- 页脚 -->
     <footer>
-        <p>&copy; 2026 上海鲜余鲜国际贸易有限公司 版权所有</p>
+        <p>&copy; 2026 上海鲜余鲜进出口贸易有限公司 版权所有</p>
     </footer>
 
     <script>
@@ -1242,6 +1303,25 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        (function () {
+            var toggle = document.querySelector('.menu-toggle');
+            var links = document.querySelector('.nav-links');
+            if (toggle && links) {
+                toggle.addEventListener('click', function () {
+                    var open = links.classList.toggle('open');
+                    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+                links.querySelectorAll('a').forEach(function (a) {
+                    a.addEventListener('click', function () {
+                        links.classList.remove('open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+        })();
     </script>
 </body>
 </html>
